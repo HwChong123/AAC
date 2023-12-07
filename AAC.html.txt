@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evenly Randomized Google Form</title>
+</head>
+<body>
+
+<script>
+    // Function to get the form with the lower count
+    function getFormWithLowerCount() {
+        // Retrieve the counts from localStorage
+        var form1Count = parseInt(localStorage.getItem('form1Count')) || 0;
+        var form2Count = parseInt(localStorage.getItem('form2Count')) || 0;
+
+        // Compare counts and return the form with the lower count
+        if (form1Count <= form2Count) {
+            localStorage.setItem('form1Count', form1Count + 1);
+            return https://docs.google.com/forms/d/e/1FAIpQLSewtpCx2U7u59AtVdImn7g7W-HE_dJUNNJpMhQzWaaZ0Ys_7w/viewform?usp=sf_link;
+        } else {
+            localStorage.setItem('form2Count', form2Count + 1);
+            return https://docs.google.com/forms/d/e/1FAIpQLSeE_DQSpY4Tksv5kqtU9JyrG0_mcZWGfVd7P7v5ljrvJ-cq-w/viewform?usp=sf_link;
+        }
+    }
+
+    // Redirect to the form with the lower count
+    window.location.href = getFormWithLowerCount();
+</script>
+
+</body>
+</html>
